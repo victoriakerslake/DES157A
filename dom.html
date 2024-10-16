@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript and the DOM</h1>
+    <div class = "special">
+        <p id = "one">Here is a paragraph</p>
+        <p>Here is another paragraph</p>
+        <p class = "blue">One last paragraph</p>
+    </div>
+    
+    <form>
+        <label><input type = "checkbox">Yes</label>
+    </form>
+
+    <dic id = "new">
+        <p>Here is the first</p>
+    </dic>
+
+    <script>
+        var newP = document.createElement("p");
+        var someText = document.createTextNode("Here is my 2nd paragraph");
+        newP.appendChild(someText);
+        document.querySelector('#new').appendChild(newP);
+
+
+        // document.getElementById("one").style.color = "red";
+
+        // var myText = document.getElementsByTagName('p');
+        // console.log(myText);
+
+        // for(var i = 0; i<myText.length; i++){
+        //     myText [i].style.color = "red";
+        // }
+
+        // var myText = document.getElementsByClassName('blue');
+        // for(var i = 0; i<myText.length; i++){
+        //     myText [i].style.color = "blue";
+        // }
+
+        // var myText = document.querySelector('p');
+        // console.log(myText.style.color = "green")
+
+        // var myText = document.querySelectorAll('p')
+        // console.log(myText)
+
+        // var myHeadings = document.querySelectorAll('h1');
+
+        // var myDiv = document.querySelector('.special');
+        // myDiv.innerHTML = "there is new content";
+
+        // var myCheckbox = document.querySelectorAll("input");
+        // myCheckbox.setAttribute("checked", "checked");
+
+    </script>
+</body>
+</html>

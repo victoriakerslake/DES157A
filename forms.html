@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Example Form</title>
+</head>
+<body>
+    <h1>Example Form</h1>
+
+    <form action = "processor.php" method = "POST">
+        <!--POST - gets sent but is hidden in the url -->
+
+        <label for = "fname">First Name</label>
+        <!--Connects label to id -->
+
+        <input type = "text" name = "fname" id = "fname" value = "someValue">
+       
+        <!--Input is self closing
+        ID Has to be unique on the page
+        Value attribute - puts a default value in the field 
+        Placeholder attribute - provides a placeholder for something, i.e example text
+                Usually used as an example for the type of data that should go in the field 
+                But not "First name" because if you start typing it goes away -->
+        
+        <!--There are many different input types-->
+        <label for = "favColor">Favorite Color</label>
+        <input type = "color" id = "favColor" name = "favColor">
+
+        <fieldset>
+            <legend>Do you want spam?</legend>
+            <input type = "radio" name = "spam" id = "spam-yes" value = "yes">
+           <label for ="spam-yes">Yes, send me spam</label>
+
+          <input type = "radio" name = "spam" id = "spam-no" value = "no" checked>
+         <label for ="spam-yes">No, DON'T send me spam</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>What animals do you like?</legend>
+
+            <input type = "checkbox" name = "animal[]" id = "cat" value = "cat">
+            <label for = "cat">Cat</label>
+
+            <input type = "checkbox" name = "animal[]" id = "dog" value = "dog">
+            <label for = "dog">Dog</label>
+
+            <input type = "checkbox" name = "animal[]" id = "llama" value = "llama">
+            <label for = "llama">Llama</label>
+        </fieldset>
+
+        <label for = "cheeses">Favorite Cheese</label>
+        <select id = "cheeses">
+            <option value = ""></option>
+            <option value ="American">American</option>
+            <option value ="Gouda">Gouda</option>
+            <option value ="Brie">Brie</option>
+            <option value ="Cheddar" >Cheddar</option>
+            <!-- Selected makes it default -->
+        </select>
+
+        <label for = "comments">Please provide comments</label>
+        <textarea for id = "comments" name = "comments" cols = "30" rows = "10"></textarea>
+
+        <input type = "submit" id = "send-form" value = "Send this form!">
+
+    </form>
+
+    <style>
+        input, 
+        label {
+            display: block;
+        }
+
+        input {
+            margin-bottom: 20px;
+        }
+
+        fieldset input, fieldset label {
+            display: inline;
+        }
+
+        fieldset label {
+            margin-bottom: 20px;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    </style>
+</body>
+</html>
